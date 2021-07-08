@@ -79,6 +79,7 @@ header .container .header_text {
 }
 
 header .container .header_text p {
+  color: #fff;
   text-transform: uppercase;
 }
 
@@ -89,7 +90,6 @@ header .container .header_text p span {
 }
 
 header .container .header_text p span:last-child {
-  color: #fff;
   font-size: 12rem;
   font-family: "Montserrat", sans-serif;
 }
@@ -181,5 +181,62 @@ section .container .row .img_side {
   padding: 20px 0;
   font-size: 1.8rem;
   font-family: "Montserrat", sans-serif;
+}
+
+.history-mini {
+  position: relative;
+  height: 90vh;
+}
+
+.history-mini .container {
+  z-index: 1;
+  position: relative;
+  top: 299px;
+}
+
+.history-mini .container .back_text p {
+  color: #fff;
+  font-size: 10rem;
+  text-align: center;
+  font-family: heading;
+}
+
+.history-mini .container .section_text {
+  text-align: center;
+}
+
+.history-mini .container .section_text h4 {
+  color: #fff;
+  padding: 20px;
+  font-size: 1.8rem;
+  font-family: heading;
+}
+
+.history-mini .back {
+  position: relative;
+  top: -200px;
+  background-image: url("/images/Old_Kolkata copy-min.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center center;
+  filter: blur(1px);
+  -webkit-filter: blur(1px);
+  height: 90vh;
+}
+
+@media screen and (max-width: 980px) {
+  .history-mini .back {
+    background-size: cover;
+    height: 80vh;
+    background-position: center center;
+  }
+}
+
+.fotter {
+  height: 100vh;
+  background: url(/images/puja-min.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center center;
 }
 /*# sourceMappingURL=main.css.map */
