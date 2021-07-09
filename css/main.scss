@@ -48,23 +48,13 @@ p {
 		padding-right: 20px;
 	}
 }
-
+// header section start
 header {
 	background: $bg;
 	height: 100%;
 	position: relative;
 	// padding-bottom: 1rem;
 	.container {
-		nav {
-			padding: 20px;
-			margin-bottom: 0rem;
-			display: flex;
-			justify-content: space-between;
-			.social {
-				display: flex;
-			}
-		}
-
 		.header_text {
 			// position: absolute;
 			position: relative;
@@ -85,6 +75,38 @@ header {
 					font-size: 12rem;
 					font-family: $Montserrat;
 				}
+				// responsive
+			}
+			@include tab {
+				p {
+					span {
+						font-size: 8rem;
+					}
+					span:last-child {
+						font-size: 8rem;
+					}
+				}
+			}
+			@include mobile {
+				p {
+					span {
+						font-size: 5rem;
+					}
+					span:last-child {
+						font-size: 6rem;
+					}
+				}
+			}
+			@include mini {
+				top: 160px;
+				p {
+					span {
+						font-size: 3rem;
+					}
+					span:last-child {
+						font-size: 4rem;
+					}
+				}
 			}
 		}
 	}
@@ -103,10 +125,31 @@ header {
 		}
 	}
 }
-
+// navbar
+nav {
+	padding: 20px;
+	margin-bottom: 0rem;
+	display: flex;
+	justify-content: space-between;
+	.box {
+		font-size: 1.8rem;
+		color: #fff;
+		cursor: pointer;
+	}
+	.social {
+		text-align: center;
+		display: flex;
+		i {
+			padding-right: 1rem;
+			color: #fff;
+			font-size: 1.6rem;
+			cursor: pointer;
+		}
+	}
+}
 // history part start
 section {
-	margin-top: 20px;
+	margin-top: 10px;
 	.container {
 		.row {
 			align-items: center;
@@ -133,15 +176,14 @@ section {
 			@include mobile {
 				width: 100%;
 				flex-direction: column;
+				padding: 1rem;
 			}
 		}
 	}
 }
 
 .text_side {
-	// padding-right: 3rem;
 	.heading_name {
-		// padding: 20px;
 		position: relative;
 		h1 {
 			position: relative;
@@ -149,8 +191,6 @@ section {
 			color: $heding;
 			font-size: 6rem;
 			font-family: heading;
-			// overflow: hidden;
-			// display: block;
 		}
 		h1:after {
 			content: '';
@@ -169,11 +209,36 @@ section {
 		font-size: 1.8rem;
 		font-family: $Montserrat;
 	}
+	// responsive
+	@include tab {
+		.heading_name {
+			h1 {
+				font-size: 4rem;
+			}
+		}
+	}
+	@include mobile {
+		.heading_name {
+			h1 {
+				font-size: 3rem;
+			}
+			h1:after {
+				bottom: 10px;
+			}
+		}
+		h3 {
+			font-size: 1.4rem;
+			font-family: $Montserrat;
+		}
+		p {
+			font-size: 1rem;
+		}
+	}
 }
 
 .history-mini {
 	position: relative;
-	height: 90vh;
+	// height: 90vh;
 	.container {
 		z-index: 1;
 		position: relative;
@@ -195,12 +260,32 @@ section {
 				font-family: heading;
 			}
 		}
+		// resposive add
+		@include tab {
+			.back_text {
+				p {
+					font-size: 8rem;
+				}
+			}
+		}
+		@include mobile {
+			.back_text {
+				p {
+					font-size: 4rem;
+				}
+			}
+			.section_text {
+				h4 {
+					font-size: 1.5rem;
+				}
+			}
+		}
 	}
 
 	.back {
 		position: relative;
 		top: -200px;
-		background-image: url('/images/Old_Kolkata\ copy-min.png');
+		background-image: url('/images/old_kolkata-no12.png');
 		background-repeat: no-repeat;
 		background-size: 100% 100%;
 		background-position: center center;
@@ -220,11 +305,83 @@ section {
 		}
 	}
 }
-.fotter {
-	height: 100vh;
-	background: url(/images/puja-min.png);
+// puja section
+.puja-mini {
+	position: relative;
+	height: 90vh;
 
-	background-repeat: no-repeat;
-	background-size: 100% 100%;
-	background-position: center center;
+	.container {
+		z-index: 1;
+		position: relative;
+		top: 299px;
+		.back_text {
+			p {
+				color: #fff;
+				font-size: 10rem;
+				text-align: center;
+				font-family: heading;
+			}
+		}
+		.section_text {
+			text-align: center;
+			h4 {
+				color: #fff;
+				padding: 20px;
+				font-size: 1.8rem;
+				font-family: heading;
+			}
+		}
+		// resposive add
+		@include tab {
+			.back_text {
+				p {
+					font-size: 8rem;
+				}
+			}
+		}
+		@include mobile {
+			.back_text {
+				p {
+					font-size: 4rem;
+				}
+			}
+			.section_text {
+				h4 {
+					padding: 20px;
+					font-size: 1.5rem;
+				}
+			}
+		}
+	}
+	.back_puja {
+		position: relative;
+		top: -200px;
+		background-image: url('/images/durga_god-min.png');
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		background-position: center center;
+		filter: blur(1px);
+		-webkit-filter: blur(1px);
+		height: 90vh;
+
+		@include mobile {
+			background-size: cover;
+			height: 80vh;
+			background-position: center center;
+		}
+	}
+}
+
+.bird {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	// width: 100%;
+	z-index: 2;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	img {
+		width: 200px;
+	}
 }
