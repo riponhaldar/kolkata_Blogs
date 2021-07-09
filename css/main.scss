@@ -110,7 +110,7 @@ header {
 			}
 		}
 	}
-	.back {
+	.backg {
 		position: relative;
 		z-index: 1;
 		background: url('/images/background-min.png');
@@ -255,7 +255,7 @@ section {
 	.container {
 		z-index: 1;
 		position: relative;
-		top: 299px;
+		top: 399px;
 		.back_text {
 			p {
 				color: #fff;
@@ -296,14 +296,16 @@ section {
 	}
 
 	.back {
+		// position: fixed;
 		position: relative;
+
 		top: -200px;
-		background-image: url('/images/old_kolkata-no12.png');
+		background-image: url('/images/howrah2_banner_desktop_1920x1080.jpg');
 		background-repeat: no-repeat;
 		background-size: 100% 100%;
 		background-position: center center;
-		filter: blur(1px);
-		-webkit-filter: blur(1px);
+		filter: blur(4px);
+		-webkit-filter: blur(4px);
 
 		height: 90vh;
 		@include tab {
