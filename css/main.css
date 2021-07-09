@@ -57,7 +57,7 @@ header .container .header_text {
   position: relative;
   top: 240px;
   width: 100%;
-  z-index: 0;
+  z-index: 1;
   text-align: center;
 }
 
@@ -115,6 +115,19 @@ header .back {
   background-position: center;
   background-size: cover;
   height: 90vh;
+}
+
+span:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #d3d7c9;
+  z-index: 1;
+  overflow: hidden;
+  -webkit-transform-origin: 100% 0;
+  transform-origin: 100% 0;
 }
 
 nav {
@@ -380,9 +393,9 @@ section .container .row .img_side {
 
 .bird {
   position: absolute;
-  bottom: 0;
+  bottom: -100px;
   right: 0;
-  z-index: 2;
+  z-index: 0;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;

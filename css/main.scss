@@ -61,7 +61,7 @@ header {
 			top: 240px;
 			// padding-top: 1rem;
 			width: 100%;
-			z-index: 0;
+			z-index: 1;
 			text-align: center;
 			p {
 				color: #fff;
@@ -124,6 +124,19 @@ header {
 			// background-size: 100% 100%;
 		}
 	}
+}
+
+span:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: $bg;
+	z-index: 1;
+	overflow: hidden;
+	-webkit-transform-origin: 100% 0;
+	transform-origin: 100% 0;
 }
 // navbar
 nav {
@@ -374,10 +387,12 @@ section {
 
 .bird {
 	position: absolute;
-	bottom: 0;
+	bottom: -100px;
 	right: 0;
+
 	// width: 100%;
-	z-index: 2;
+	z-index: 0;
+	// opacity: 0.6;
 	align-items: center;
 	justify-content: center;
 	text-align: center;
